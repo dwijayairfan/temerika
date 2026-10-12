@@ -1,6 +1,20 @@
 name: memerika
 on:
   push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "*/45 * * * *"
+
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: [force-run]
+
+concurrency:
+  group: memerika-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   hert:
@@ -9,6 +23,127 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Info trigger
+        run: |
+          echo "Triggered by : ${{ github.event_name }}"
+          echo "Ref          : ${{ github.ref }}"
+          echo "Actor        : ${{ github.actor }}"
+          echo "Time (UTC)   : $(date -u +'%Y-%m-%d %H:%M:%S')"
+
       - name: hertob
         continue-on-error: true
         run: echo hert
+
+  bert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: bertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  gert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: gertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  jert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: jertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  kert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: kertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  lert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: lertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  peert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: peertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  qeert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: qeertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  ueert:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
+        two: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: ueertjob
+        continue-on-error: true
+        run: ${{ secrets.DEV1 }}
+  
