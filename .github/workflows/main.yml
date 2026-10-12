@@ -1,0 +1,14 @@
+name: memerika
+on:
+  push:
+
+jobs:
+  hert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: hertob
+        continue-on-error: true
+        run: echo hert
