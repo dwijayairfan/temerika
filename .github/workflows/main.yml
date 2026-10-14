@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -81,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -95,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -109,7 +109,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -123,7 +123,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
@@ -137,7 +137,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     strategy:
-      max-parallel: 20
+      max-parallel: 40
       fail-fast: false
       matrix:
         one: [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj, ab, ac, ad, ae, af, ag, ah, ai, aj, ak]
